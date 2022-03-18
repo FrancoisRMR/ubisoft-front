@@ -1,0 +1,81 @@
+#multiple-game {
+  width: 100%;
+  height: 100%;
+  background-image: url("./../../assets/images/Ubisoft-Store.jpg");
+  background-repeat: no-repeat;
+  background-size: center 100%;
+
+  .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+
+  .chart-container {
+    margin-top: 70px !important;
+    width: 55%;
+  }
+
+  .card {
+    width: 250px;
+    height: 250px;
+    border: 2px solid white;
+    background: none;
+    color: white;
+
+    margin-right: 30px;
+    margin-left: 30px;
+
+    .name {
+      font-size: 1.2rem;
+      text-decoration: underline;
+    }
+    .views {
+      font-size: 3rem;
+    }
+  }
+
+  .lds-dual-ring {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+  }
+
+  .loading-message {
+    color: #ffffff;
+    font-size: 2rem;
+  }
+
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 134px;
+    height: 134px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.arrow-left {
+  color: #ffffff;
+  position: absolute;
+  left: 10px;
+  top: calc(50% - 25px);
+  cursor: pointer;
+}
+
+.material-icons-outlined {
+  font-size: 70px;
+}

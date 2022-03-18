@@ -1,0 +1,12 @@
+<app-single-game
+  *ngIf="isSingleGame"
+  [dataToDisplay]="gameDetails[0]"
+  (navigateToOutput)="navigateTo($event)"
+></app-single-game>
+
+<app-multiple-games
+  *ngIf="!isSingleGame"
+  [dataToDisplay]="gameDetails"
+  [colors]="colors"
+  (navigateToOutput)="navigateTo($event)"
+></app-multiple-games>

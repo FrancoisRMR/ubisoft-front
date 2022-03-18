@@ -1,0 +1,42 @@
+<div
+  class="d-flex flex-row w-100 h-100"
+  (mouseleave)="onLeave([rainboxSixOverlay, multipleGamesOverlay])"
+>
+  <!-- RAINBOW SIX SIEGE BLOC -->
+  <div
+    id="rainbox-six"
+    (mouseover)="onOver(multipleGamesOverlay, rainboxSixOverlay)"
+    class="d-flex flex-column container p-0"
+  >
+    <div
+      #rainboxSixOverlay
+      [@myAnimationTrigger]="'true'"
+      class="d-flex flex-column align-items-center overlay"
+    >
+      <div class="custom-button m-auto" (click)="navigateTo('rainbow-six-siege')">
+        <div class="btn btn-custom">
+          <span>RAINBOW SIX SIEGE</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MULTIPLE GAMES BLOC -->
+  <div
+    id="multiple-games"
+    (mouseover)="onOver(rainboxSixOverlay, multipleGamesOverlay)"
+    class="d-flex flex-column container p-0"
+  >
+    <div
+      #multipleGamesOverlay
+      [@myAnimationTrigger]="'true'"
+      class="d-flex flex-column align-items-center overlay"
+    >
+      <div class="custom-button m-auto" (click)="navigateTo('multiple-games')">
+        <div class="btn btn-custom">
+          <span>DATA VISUALISATION</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

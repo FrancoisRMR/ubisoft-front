@@ -1,0 +1,34 @@
+<div id="multiple-game">
+  <div class="overlay d-flex flex-column align-items-center h-100">
+    <div
+      *ngIf="!dataToDisplay || !dataToDisplay.length"
+      class="d-flex flex-column m-auto"
+    >
+      <div class="lds-dual-ring m-auto"></div>
+      <span class="loading-message mt-4">Loading ...</span>
+    </div>
+    <div
+      *ngIf="dataToDisplay && dataToDisplay.length"
+      class="w-100 h-100 m-auto"
+    >
+      <div class="chart-container m-auto mb-4">
+        <app-chart [data]="dataToDisplay"></app-chart>
+      </div>
+      <div
+        class="w-100 d-flex flex-row justify-content-center align-items-center"
+      >
+        <div
+          *ngFor="let data of dataToDisplay let i = index"
+          class="card d-flex flex-column justify-content-center align-items-center" [ngStyle]="{'border-color': colors[i]}"
+        >
+          <span class="name mb-4">{{ data.name }}</span>
+          <span class="views">{{ data.views | number }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="d-flex flex-row arrow-left align-items-center" (click)="navigateTo('home')">
+  <span class="material-icons-outlined">keyboard_arrow_left</span>
+  <span>HOME</span>
+</div>

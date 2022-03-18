@@ -1,0 +1,29 @@
+<div id="single-game" class="">
+  <div class="overlay d-flex flex-column align-items-center">
+    <div class="header">
+      <img class="logo" src="./../../assets/images/Daco_4108016.png" />
+      <div *ngIf="dataToDisplay" class="d-flex flex-row align-items-center live">
+        <div class="blob"></div>
+        <span class="description">Numbers of twitch viewers</span>
+      </div>
+    </div>
+    <div *ngIf="!dataToDisplay" class="d-flex flex-column m-auto">
+      <div class="lds-dual-ring m-auto"></div>
+      <span class="loading-message mt-4">Loading ...</span>
+    </div>
+    <div *ngIf="dataToDisplay" class="circle m-auto">
+      <div class="numbers">{{ dataToDisplay?.views | number }}</div>
+      <hr />
+      <div class="infos">
+        <div class="title mb-2">Last updated at</div>
+        <div>{{ dataToDisplay?.lastUpdatedAt | date: "medium" }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="d-flex flex-row arrow-left align-items-center" (click)="navigateTo('home')">
+  <span class="material-icons-outlined">keyboard_arrow_left</span>
+  <span>HOME</span>
+</div>
+

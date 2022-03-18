@@ -1,0 +1,14 @@
+@import './assets/styles/reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import 'material-icons/iconfont/material-icons.scss';
+body {
+  height: 100vh;
+  max-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+
+.btn-group-lg>.btn, .btn-lg {
+  border-radius: 0;
+}
